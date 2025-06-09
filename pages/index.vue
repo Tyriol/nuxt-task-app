@@ -9,10 +9,10 @@ const {
 </script>
 
 <template>
-  <h1>Your tasks:</h1>
   <article v-if="status === 'pending'" aria-busy="true" />
   <article class="error" v-else-if="error">{{ error.statusMessage }}</article>
   <div v-else>
-    <article v-for="task in tasks" :key="task.id">{{ task.title }}</article>
+    <article v-if="tasks?.length === 0">Add a task to get started</article>
+    <article v-else v-for="task in tasks" :key="task.id">{{ task.title }}</article>
   </div>
 </template>
