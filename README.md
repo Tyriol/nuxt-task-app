@@ -1,75 +1,71 @@
-# Nuxt Minimal Starter
+# Nuxt Task App ✅
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A simple task app built using Nuxt, using a SQLite db provided by Turso
 
-## Setup
+## How to run 💾
 
-Make sure to install dependencies:
+Clone or download the repo
 
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+```
+https://github.com/Tyriol/nuxt-task-app.git
 ```
 
-## Development Server
+---
 
-Start the development server on `http://localhost:3000`:
+You will need to create a Turso database, which you can do here [Turso Quick Start](https://docs.turso.tech/quickstart)
 
-```bash
-# npm
+Then create a `.env` file to add the following environment variables:
+
+```
+TURSO_DATABASE_URL=
+TURSO_AUTH_TOKEN=
+```
+
+You can of course use whatever other db you'd like.
+
+---
+
+Navigate to the project folder
+
+```
+cd nuxt-task-app
+```
+
+---
+
+Install dependencies and run the app
+
+```
+npm i
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## Features ✨
 
-Build the application for production:
+- Ability to add tasks and view them on their own page.
+- Clean styles from Pico Css and some custom styles
 
-```bash
-# npm
-npm run build
+## Tech used 🤖
 
-# pnpm
-pnpm build
+- [Vue.js](https://vuejs.org/)
+- [Nuxt](https://nuxt.com/)
+- [Turso]() <br>
+  A database service that provides SQLite databases
+- [Drizzle](https://orm.drizzle.team/)<br>
+  ORM: A TypeScript-first database toolkit that lets you write database queries using JavaScript/TypeScript code instead of raw SQL.<br>
+  Kit: The cli companion to Drizzle ORM that handles database migrations, schema changes, and generates the code needed to keep your database structure in sync with your application.
+  Drizzle-Zod: A bridge library that automatically generates Zod validation schemas from your Drizzle database schemas.
+- [Zod](https://zod.dev/)<br>
+  A TypeScript library for validating and parsing data
+- [Pico CSS](https://picocss.com/)
 
-# yarn
-yarn build
+## Why I built this ❓
 
-# bun
-bun run build
-```
+Continueing my journey to learn another library and framework other than React and Next, to see if I would like to invest more time down this path, but also to be better able to adapt to other languages and frameworks rather than being stuck in the React/JS mindset.
 
-Locally preview production build:
+## Future features 💡
 
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- Ability to update a task.
+- Ability to mark a task as done.
+- Ability to delete a task.
+- ? Filtering maybe
