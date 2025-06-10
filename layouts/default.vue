@@ -11,6 +11,7 @@
 .button-container {
   display: flex;
   justify-content: end;
+  gap: 1rem;
 }
 
 .error {
