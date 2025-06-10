@@ -14,7 +14,7 @@ const {
   <div v-else>
     <article v-if="tasks?.length === 0">Add a task to get started</article>
     <article v-else v-for="task in tasks" :key="task.id">
-      {{ task.title }}
+      <span :class="{ done: task.done }">{{ task.title }}</span>
       <div class="button-container">
         <NuxtLink role="button" :to="{ name: 'tasks-id', params: { id: task.id } }">View</NuxtLink>
       </div>

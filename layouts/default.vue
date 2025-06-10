@@ -17,4 +17,8 @@
 .error {
   color: red;
 }
+
+.done {
+  text-decoration: line-through;
+}
 </style>
