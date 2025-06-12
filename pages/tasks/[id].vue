@@ -21,9 +21,22 @@ async function toggleDone() {
     });
 
     if (!result) throw Error;
-    console.log(result);
     task.value.done = result[0].done;
   } catch (error) {
+    console.error(error);
+  }
+}
+
+async function removeTask() {
+  if (!task.value) return;
+
+  try {
+    const result = await $fetch(`/api/tasks/${task.value.id}`, {
+      method: "DELETE",
+    });
+    if (!result) throw Error;
+    navigateTo("/");
+  } catch {
     console.error(error);
   }
 }
@@ -40,7 +53,7 @@ async function toggleDone() {
       <span :class="{ done: task.done }">{{ task.title }}</span>
     </article>
     <div class="button-container">
-      <button>Remove</button>
+      <button @click="removeTask">Remove</button>
     </div>
   </div>
 </template>
