@@ -65,7 +65,6 @@ Continueing my journey to learn another library and framework other than React a
 
 ## Future features 💡
 
-- Ability to update a task.
-- Ability to mark a task as done.
-- Ability to delete a task.
+- Ability to mark a task as done ✅
+- Ability to delete a task. ✅
 - ? Filtering maybe
