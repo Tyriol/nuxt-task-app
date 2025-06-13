@@ -32,5 +32,5 @@ export default defineEventHandler(async (event) => {
     );
   }
 
-  return deletedTask;
+  return deletedTask[0];
 });
