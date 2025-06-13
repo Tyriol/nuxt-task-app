@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/eslint"],
   css: ["@picocss/pico"],
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+  },
   eslint: {
     config: {
       stylistic: {
